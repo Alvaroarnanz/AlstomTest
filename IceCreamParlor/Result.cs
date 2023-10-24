@@ -3,11 +3,11 @@ public class Result
 {
     public static List<int> IcecreamParlor(int amountMoney, List<int> iceCreamPrices)
     {
-        for (int i = 0; i < iceCreamPrices.Count(); i++) 
+        for (int i = 0; i < iceCreamPrices.Count(); i++) //Iterates the matrix selecting a number
         {
             int a = iceCreamPrices[i]; 
 
-            for (int j = i + 1; j < iceCreamPrices.Count(); j++)
+            for (int j = i + 1; j < iceCreamPrices.Count(); j++) //Iterates the matrix selecting the number in the next position
             {
                 int b = iceCreamPrices[j];
 
@@ -17,6 +17,6 @@ public class Result
                 }
             }
         }
-        return new List<int>(); //Return an empty list
+        return new List<int>(); //If not find a solution, return an empty list
     }
 }

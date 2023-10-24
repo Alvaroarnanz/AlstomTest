@@ -9,7 +9,9 @@ public class ValidatorTest
     [InlineData(51)]
     [InlineData(10000)]
     public void ValidateNumberOfTrips_with_invalid_values_and_throw_ArgumentException(int numberOfTrips)
-        => Assert.Throws<ArgumentException>(() => Validator.ValidateNumberTrips(numberOfTrips));
+    {
+        Assert.Throws<ArgumentException>(() => Validator.ValidateNumberTrips(numberOfTrips));
+    }
 
     [Theory(DisplayName = "Must validate a valid number of trips and not throw ArgumentException")]
     [InlineData(1)]
@@ -27,8 +29,11 @@ public class ValidatorTest
     [InlineData(10001)]
     [InlineData(99999)]
     public void ValidateAmountMoney_with_invalid_values_and_throw_ArgumentException(int amountOfMoney)
-        => Assert.Throws<ArgumentException>(() => Validator.ValidateAmountMoney(amountOfMoney));
-    
+    {
+        Assert.Throws<ArgumentException>(() => Validator.ValidateAmountMoney(amountOfMoney));
+    }
+
+
     [Theory(DisplayName = "Must validate a valid amount of money and not throw ArgumentException")]
     [InlineData(2)]
     [InlineData(5000)]
@@ -39,12 +44,16 @@ public class ValidatorTest
         Assert.Null(exception);
     }
 
+
     [Theory(DisplayName = "Must validate a invalid number of flavors and throw ArgumentException")]
     [InlineData(1)]
     [InlineData(10001)]
     [InlineData(99999)]
     public void ValidateNumberOfFlavors_with_invalid_values_and_throw_ArgumentException(int numberOfFlavors)
-    => Assert.Throws<ArgumentException>(() => Validator.ValidateNumberFlavors(numberOfFlavors));
+    {
+        Assert.Throws<ArgumentException>(() => Validator.ValidateNumberFlavors(numberOfFlavors));
+    }
+
 
     [Theory(DisplayName = "Must validate a valid number of flavors and not throw ArgumentException")]
     [InlineData(2)]

@@ -19,9 +19,9 @@ class Program
                 Validator.ValidateNumberFlavors(n);//validate the number of flavors
 
                 List<int> arr = ReadArray();
-                Validator.ValidateSizeFlavors(n, arr); // validate the size of array
+                Validator.ValidateSizeFlavors(n, arr); //validate the size of array
 
-                List<int> result = Result.IcecreamParlor(m, arr); // search for a possible solution
+                List<int> result = Result.IcecreamParlor(m, arr); //search for a possible solution
 
                 textWriter.WriteLine(String.Join(" ", result));
             }

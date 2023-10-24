@@ -2,6 +2,7 @@
 
 namespace IceCreamParlor;
 
+// This class contains all the necessary validations of the inputs
 public class Validator
 {
     /// <summary>
